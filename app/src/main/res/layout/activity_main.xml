@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.doranco.quizz.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="Bonjour ! Bienvenue sur mon Quizz"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPrenom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Veuillez entrer votre prénom"
+        android:inputType="textPersonName"
+        android:textColorHint="#03A9F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/buttonCommencerQuizz"
+        android:layout_width="214dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="44dp"
+        android:onClick="commencerQuizz"
+        android:text="Commencez le quizz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrenom" />
+
+    <Button
+        android:id="@+id/buttonAfficherUsers"
+        android:layout_width="217dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="136dp"
+        android:onClick="afficherUtilisateurs"
+        android:text="Afficher Utilisateurs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrenom" />
+
+    <TextView
+        android:id="@+id/listUsers"
+        android:layout_width="377dp"
+        android:layout_height="358dp"
+        android:layout_marginTop="16dp"
+        android:text="Liste des Utilisateurs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAfficherUsers" />
+</androidx.constraintlayout.widget.ConstraintLayout>
